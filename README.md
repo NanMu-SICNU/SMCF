@@ -1,6 +1,7 @@
 # Video salient object detection via self-attention-guided multilayer cross-stack fusion
 
-```
+This repository contains the source code for the paper: Video salient object detection via self-attention-guided multilayer cross-stack fusion
+
 
 ## Cite
 If you find our code useful for your research, please cite our paper:
