@@ -7,7 +7,7 @@ import argparse
 from datetime import datetime
 from utils.dataloader import get_train_loader
 from utils.func import AvgMeter, update_predict
-from lib.amcf import AMCF
+from lib.smcf import SMCF
 
 
 def main():
@@ -16,17 +16,17 @@ def main():
     parser.add_argument('--lr', type=float, default=2e-3, help='learning rate')
     parser.add_argument('--batchsize', type=int, default=10, help='batch size')
     parser.add_argument('--trainsize', type=int, default=352, help='input size')
-    parser.add_argument('--trainset', type=str, default='AMCF')
+    parser.add_argument('--trainset', type=str, default='SMCF')
     parser.add_argument('--train_type', type=str, default='finetune', help='finetune or pretrain_rgb or pretrain_flow')
     opt = parser.parse_args()
 
     # build models
-    model = AMCF().cuda()
+    model = SMCF().cuda()
 
     if opt.train_type == 'finetune':
         save_path = './snapshot/{}/'.format(opt.trainset)
         # ---- data preparing ----
-        src_dir = './data/TrainSet_Video'
+        src_dir = './data/TrainSet_Flow'
         image_root = src_dir + '/Imgs/'
         flow_root = src_dir + '/Flow/'
         gt_root = src_dir + '/ground-truth/'
@@ -40,7 +40,7 @@ def main():
     elif opt.train_type == 'pretrain_rgb':
         save_path = './snapshot/{}_rgb/'.format(opt.trainset)
         # ---- data preparing ----
-        src_dir = './data/TrainSet_StaticAndVideo'
+        src_dir = './data/TrainSet_RGB'
         image_root = src_dir + '/Imgs/'
         gt_root = src_dir + '/GTs/'
 
@@ -51,7 +51,7 @@ def main():
     elif opt.train_type == 'pretrain_flow':
         save_path = './snapshot/{}_flow/'.format(opt.trainset)
         # ---- data preparing ----
-        src_dir = './data/TrainSet_Video'
+        src_dir = './data/TrainSet_Flow'
         flow_root = src_dir + '/Flow/'
         gt_root = src_dir + '/ground-truth/'
 
