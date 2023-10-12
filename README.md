@@ -30,7 +30,9 @@ python train.py --train_type=finetune
 ```
 
 ### 3. Testing
+
 * The test dataset can be downloaded from:
+
 | **Datasets**  | **Links**                                                                                                  |
 |---------------|------------------------------------------------------------------------------------------------------------|
 | DAVIS         | [Google Drive Link](https://drive.google.com/file/d/15ya6RbZhnkoS_QvDNGIXbwwDydwlnrZy/view?usp=drive_link) |
@@ -48,6 +50,7 @@ python test.py
 ### 3. Results
 
 * The predictions of our model can be downloaded from:
+
 | **Datasets**  | **Links**                                                                                                  |
 |---------------|------------------------------------------------------------------------------------------------------------|
 | DAVIS         | [Google Drive Link](https://drive.google.com/file/d/1YcdBroPpg_JLhxD16gZS9P9Oa1453ycD/view?usp=drive_link) |
@@ -57,6 +60,7 @@ python test.py
 | MCL           | [Google Drive Link](https://drive.google.com/file/d/1n0svfFhcScTpPZG5MdLsHOq5blK0GnJ3/view?usp=sharing)    |
 
 ## Method Detials
+
 ![](./png/model.png)
 
 
