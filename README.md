@@ -11,23 +11,26 @@ This repository contains the source code for the paper: Video salient object det
 
 ### Training
 
-* Run `train.py --train_type=pretrain_rgb` to start the training of the first stage
+* To train the spatial feature branch, download `TrainSet_RGB` and put it `in ./data`. Run `train.py --train_type=pretrain_rgb` to start the training of the first stage
 
 ```
 python train.py --train_type=pretrain_rgb
 ```
+The generated `SMCF-19epoch.pth` file will be stored in the `./snapshot/SMCF_rgb` directory for the third stage of training.
 
-* Run `train.py --train_type=pretrain_flow` to start the training of the second stage
+* To train the motion feature branch, download `TrainSet_Video` and put it in `./data`. Run `train.py --train_type=pretrain_flow` to start the training of the second stage
 
 ```
 python train.py --train_type=pretrain_flow
 ```
+The generated `SMCF-19epoch.pth` file will be stored in the `./snapshot/SMCF_flow` directory for the third stage of training.
 
-* Run `train.py --train_type=finetune` to start the training of the third stage
+* To train the whole model, download `TrainSet_Video` (same dataset as in the second stage) and put it in `./data`. Run `train.py --train_type=finetune` to start the training of the third stage
 
 ```
 python train.py --train_type=finetune
 ```
+The generated `SMCF-19epoch.pth` file will be stored in the `./snapshot/SMCF` directory as the final training model.
 
 ### 3. Testing
 * Run `test.py` to start the testing
@@ -36,6 +39,7 @@ python train.py --train_type=finetune
 python test.py
 ```
 
+### 3. Results
 
 
 
