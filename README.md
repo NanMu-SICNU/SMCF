@@ -11,26 +11,23 @@ This repository contains the source code for the paper: Video salient object det
 
 ### Training
 
-* To train the spatial feature branch, download `TrainSet_RGB` [Google Drive Link](https://drive.google.com/file/d/1r0hzStPXFH0qJPReRjrKDdWF9xj_gw0f/view?usp=sharing) and put it `in ./data`. Run `train.py --train_type=pretrain_rgb` to start the training of the first stage
+* To train the spatial feature branch, download `TrainSet_RGB` [Google Drive Link](https://drive.google.com/file/d/1r0hzStPXFH0qJPReRjrKDdWF9xj_gw0f/view?usp=sharing) and put it `in ./data`. Run `train.py --train_type=pretrain_rgb` to start the training of the first stage. The generated `SMCF-19epoch.pth` file will be stored in the `./snapshot/SMCF_rgb` directory for the third stage of training.
 
 ```
 python train.py --train_type=pretrain_rgb
 ```
-The generated `SMCF-19epoch.pth` file will be stored in the `./snapshot/SMCF_rgb` directory for the third stage of training.
 
-* To train the motion feature branch, download `TrainSet_Video` [Google Drive Link](https://drive.google.com/file/d/1GHpJ9-kKx64rdNlcf68CHqNlPXeguF_W/view?usp=drive_link) and put it in `./data`. Run `train.py --train_type=pretrain_flow` to start the training of the second stage
+* To train the motion feature branch, download `TrainSet_Video` [Google Drive Link](https://drive.google.com/file/d/1GHpJ9-kKx64rdNlcf68CHqNlPXeguF_W/view?usp=drive_link) and put it in `./data`. Run `train.py --train_type=pretrain_flow` to start the training of the second stage. The generated `SMCF-19epoch.pth` file will be stored in the `./snapshot/SMCF_flow` directory for the third stage of training.
 
 ```
 python train.py --train_type=pretrain_flow
 ```
-The generated `SMCF-19epoch.pth` file will be stored in the `./snapshot/SMCF_flow` directory for the third stage of training.
 
-* To train the whole model, download `TrainSet_Video` (same dataset as in the second stage) and put it in `./data`. Run `train.py --train_type=finetune` to start the training of the third stage
+* To train the whole model, download `TrainSet_Video` (same dataset as in the second stage) and put it in `./data`. Run `train.py --train_type=finetune` to start the training of the third stage. The generated `SMCF-19epoch.pth` file will be stored in the `./snapshot/SMCF` directory as the final training model
 
 ```
 python train.py --train_type=finetune
 ```
-The generated `SMCF-19epoch.pth` file will be stored in the `./snapshot/SMCF` directory as the final training model
 
 ### 3. Testing
 * The test dataset can be downloaded from:
@@ -42,7 +39,7 @@ The generated `SMCF-19epoch.pth` file will be stored in the `./snapshot/SMCF` di
 | FBMS          | [Google Drive Link](https://drive.google.com/file/d/1JZGiQjIsa3iELWCi4H6Phe39dr0cvm7b/view?usp=drive_link) |
 | MCL           | [Google Drive Link](https://drive.google.com/file/d/14VcWj0c0I6SUA4_VoZmExXXnK6LszGcu/view?usp=drive_link) |
 
-* One can download our trained model `SMCF-19epoch.pth`, and place it in `./snapshot/SMCF`. Run `test.py` to start the testing
+* One can download our trained model `SMCF-19epoch.pth`, and place it in `./snapshot/SMCF`. Run `test.py` to start the testing.
 
 ```
 python test.py
