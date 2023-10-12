@@ -11,14 +11,14 @@ This repository contains the source code for the paper: Video salient object det
 
 ### Training
 
-* To train the spatial feature branch, download `TrainSet_RGB`  [Google Drive Link](https://drive.google.com/file/d/1r0hzStPXFH0qJPReRjrKDdWF9xj_gw0f/view?usp=sharing) and put it `in ./data`. Run `train.py --train_type=pretrain_rgb` to start the training of the first stage
+* To train the spatial feature branch, download `TrainSet_RGB` [Google Drive Link](https://drive.google.com/file/d/1r0hzStPXFH0qJPReRjrKDdWF9xj_gw0f/view?usp=sharing) and put it `in ./data`. Run `train.py --train_type=pretrain_rgb` to start the training of the first stage
 
 ```
 python train.py --train_type=pretrain_rgb
 ```
 The generated `SMCF-19epoch.pth` file will be stored in the `./snapshot/SMCF_rgb` directory for the third stage of training.
 
-* To train the motion feature branch, download `TrainSet_Video`  [Google Drive Link](https://drive.google.com/file/d/1GHpJ9-kKx64rdNlcf68CHqNlPXeguF_W/view?usp=drive_link) and put it in `./data`. Run `train.py --train_type=pretrain_flow` to start the training of the second stage
+* To train the motion feature branch, download `TrainSet_Video` [Google Drive Link](https://drive.google.com/file/d/1GHpJ9-kKx64rdNlcf68CHqNlPXeguF_W/view?usp=drive_link) and put it in `./data`. Run `train.py --train_type=pretrain_flow` to start the training of the second stage
 
 ```
 python train.py --train_type=pretrain_flow
