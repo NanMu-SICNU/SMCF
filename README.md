@@ -33,7 +33,7 @@ python train.py --train_type=finetune
 The generated `SMCF-19epoch.pth` file will be stored in the `./snapshot/SMCF` directory as the final training model.
 
 ### 3. Testing
-* Run `test.py` to start the testing
+* One can download our trained model `SMCF-19epoch.pth`, in `./snapshot/SMCF`. Run `test.py` to start the testing
 
 ```
 python test.py
