@@ -203,9 +203,9 @@ class Decoder(nn.Module):
         return x
 
 
-class AMCF(nn.Module):
+class SMCF(nn.Module):
     def __init__(self, channel=32):
-        super(AMCF, self).__init__()
+        super(SMCF, self).__init__()
         self.resnet = ResNet50()
 
         # Attention Channel
