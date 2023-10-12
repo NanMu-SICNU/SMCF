@@ -30,16 +30,17 @@ The generated `SMCF-19epoch.pth` file will be stored in the `./snapshot/SMCF_flo
 ```
 python train.py --train_type=finetune
 ```
-The generated `SMCF-19epoch.pth` file will be stored in the `./snapshot/SMCF` directory as the final training model.
+The generated `SMCF-19epoch.pth` file will be stored in the `./snapshot/SMCF` directory as the final training model
 
 ### 3. Testing
-| Task | Weights                                                                                                                           | 
-| ---- | --------------------------------------------------------------------------------------------------------------------------------- |
-| DAVIS  | [GitHub Release Link](https://drive.google.com/file/d/15ya6RbZhnkoS_QvDNGIXbwwDydwlnrZy/view?usp=drive_link)        | 
-| DAVSOD  | [GitHub Release Link](https://drive.google.com/file/d/1VysCRecOWHhI_9jwIesUwcx2dOxD881T/view?usp=drive_link) |
-| DAVSOD-Normal  | [GitHub Release Link](https://drive.google.com/file/d/1iN1fnYoFqJX4NoHwAagIIbFxW7oY0IO4/view?usp=drive_link)        | 
-| FBMS  | [GitHub Release Link](https://drive.google.com/file/d/1JZGiQjIsa3iELWCi4H6Phe39dr0cvm7b/view?usp=drive_link) |
-| MCL  | [GitHub Release Link](https://drive.google.com/file/d/14VcWj0c0I6SUA4_VoZmExXXnK6LszGcu/view?usp=drive_link) |
+* The test dataset can be downloaded from:
+| Datasets | Links                                                                                                         | 
+| ---- | ----------------------------------------------------------------------------------------------------------------|
+| DAVIS  | [Google Drive Link](https://drive.google.com/file/d/15ya6RbZhnkoS_QvDNGIXbwwDydwlnrZy/view?usp=drive_link)  | 
+| DAVSOD  | [Google Drive Link](https://drive.google.com/file/d/1VysCRecOWHhI_9jwIesUwcx2dOxD881T/view?usp=drive_link) |
+| DAVSOD-Normal  | [Google Drive Link](https://drive.google.com/file/d/1iN1fnYoFqJX4NoHwAagIIbFxW7oY0IO4/view?usp=drive_link) | 
+| FBMS  | [Google Drive Link](https://drive.google.com/file/d/1JZGiQjIsa3iELWCi4H6Phe39dr0cvm7b/view?usp=drive_link) |
+| MCL  | [Google Drive Link](https://drive.google.com/file/d/14VcWj0c0I6SUA4_VoZmExXXnK6LszGcu/view?usp=drive_link) |
 
 * One can download our trained model `SMCF-19epoch.pth`, and place it in `./snapshot/SMCF`. Run `test.py` to start the testing
 
@@ -49,6 +50,14 @@ python test.py
 
 ### 3. Results
 
+* The predictions of our model can be downloaded from:
+| Datasets | Links                                                                                                         | 
+| ---- | ----------------------------------------------------------------------------------------------------------------|
+| DAVIS  | [Google Drive Link](https://drive.google.com/file/d/1YcdBroPpg_JLhxD16gZS9P9Oa1453ycD/view?usp=drive_link)  | 
+| DAVSOD  | [Google Drive Link](https://drive.google.com/file/d/1avgZjyVDgLkXEgQnkshe9Jw4GquAhSrG/view?usp=drive_link) |
+| DAVSOD-Normal  | [Google Drive Link](https://drive.google.com/file/d/1f-agavxm063SnzTguzlOVDnLnyrSXIJy/view?usp=drive_link) | 
+| FBMS  | [Google Drive Link](https://drive.google.com/file/d/1-xiIj1q8wqb9X9wnLpOTLVFP_pbi4IlA/view?usp=drive_link) |
+| MCL  | [Google Drive Link](https://drive.google.com/file/d/1n0svfFhcScTpPZG5MdLsHOq5blK0GnJ3/view?usp=sharing) |
 
 
 ## Method Detials
