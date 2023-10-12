@@ -4,7 +4,7 @@ import numpy as np
 import os
 import shutil
 from utils.dataloader import get_test_loader
-from lib.amcf import AMCF
+from lib.smcf import SMCF
 import argparse
 import time
 from scipy import misc  # NOTES: scipy=1.2.2
@@ -14,7 +14,7 @@ import imageio
 
 
 def demo(opt):
-    model = AMCF().cuda()
+    model = SMCF().cuda()
     pretrain = torch.load(opt.model_path)
     if len(opt.gpu_id) > 1:
         # for the multiple gpus
@@ -82,9 +82,9 @@ if __name__ == "__main__":
     parser.add_argument('--test_dataset', type=list,  help='your test dataset name assigned in the img/gt dictionary',
                         default=['DAVIS', 'FBMS', 'SegTrack-V2', 'MCL', 'DAVSOD', 'DAVSOD-Difficult-20', 'DAVSOD-Normal-25','NV_SOURCE'])
     parser.add_argument('--model_path', type=str,
-                        default='./snapshot/AMCF/AMCF-19epoch.pth')
+                        default='./snapshot/SMCF/SMCF-19epoch.pth')
     parser.add_argument('--test_save', type=str,
-                        default='./result/AMCF-New/')
+                        default='./result/SMCF-New/')
     parser.add_argument('--batchsize', type=int,
                         default=5)    # we only set BS=24 for efficient inference
     parser.add_argument('-dataset_path', type=str,
