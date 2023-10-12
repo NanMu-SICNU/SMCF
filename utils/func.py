@@ -38,7 +38,7 @@ def update_predict(model):
     # NOTES: load pretrained model (flow)
     # ---- copy model-a to model-b ----
     model_dict = model.state_dict()  # copy base models to the object models
-    state_dict = torch.load('./snapshot/AMCF_flow/AMCF-19epoch.pth')
+    state_dict = torch.load('./snapshot/SMCF_flow/SMCF-19epoch.pth')
     # ---- for checking state_dict ----
     # for k, v in state_dict.items():
     #     print(k, ':', v.min(), v.max())
@@ -50,7 +50,7 @@ def update_predict(model):
     # NOTES: load pretrained model (rgb)
     # ---- copy model-a to model-b ----
     model_dict = model.state_dict()  # copy base models to the object models
-    state_dict = torch.load('./snapshot/AMCF_rgb/AMCF-19epoch.pth')
+    state_dict = torch.load('./snapshot/SMCF_rgb/SMCF-19epoch.pth')
     #new_state_dict = {k: v for k, v in state_dict.items() if k in model_dict}
     new_state_dict = {k.replace('module.', ''): v for k, v in state_dict.items() if
                       k.replace('module.', '') in model_dict}
