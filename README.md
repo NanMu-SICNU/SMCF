@@ -41,7 +41,7 @@ python train.py --train_type=finetune
 | FBMS          | [Google Drive Link](https://drive.google.com/file/d/1JZGiQjIsa3iELWCi4H6Phe39dr0cvm7b/view?usp=drive_link) |
 | MCL           | [Google Drive Link](https://drive.google.com/file/d/14VcWj0c0I6SUA4_VoZmExXXnK6LszGcu/view?usp=drive_link) |
 
-* One can download our trained model `SMCF-19epoch.pth`, and place it in `./snapshot/SMCF`. Run `test.py` to start the testing.
+* One can download our trained model `SMCF-19epoch.pth`[Google Drive Link](https://drive.google.com/file/d/1xzPAa-sgJV3QDXCuAFdZZY6fKVtaPMUF/view?usp=sharing), and place it in `./snapshot/SMCF`. Run `test.py` to start the testing.
 
 ```
 python test.py
